@@ -1,0 +1,258 @@
+/* === Общие стили === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/imageForFon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Полупрозрачный слой поверх фона */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* === Контейнер и заголовок === */
+.container {
+    padding: 100px 40px 40px 40px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+h1 {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black !important; /* переопределяем твой #2c3e50 */
+    font-weight: 700;
+    font-size: 70px;
+    margin: 0;
+    z-index: 1000;
+}
+
+
+
+/* === Фиксированная кнопка "Back to home" === */
+.back-home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* лёгкая тень по умолчанию */
+    z-index: 1000;
+}
+
+
+
+.add-firm-btn {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color: #007bff;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* лёгкая тень по умолчанию */
+    z-index: 1000;
+}
+
+.back-home-btn:hover,
+.add-firm-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* чуть больше */
+    box-shadow: 0 8px 16px rgba(0, 86, 179, 0.4); /* глубокая синяя тень */
+}
+
+
+/* === Таблица === */
+
+/* === Обёртка таблицы === */
+.table-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+    padding: 55px 10px 10px 10px;
+    box-sizing: border-box;
+}
+
+/* === Таблица === */
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-size: 12px;
+    table-layout: fixed;
+    border-radius: 16px;
+    animation: fadeIn 0.7s ease-in-out;
+
+}
+
+thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody {
+    display: block;
+    max-height: 550px; /* Высота под 4 строки */
+    overflow-y: auto;
+    width: 100%;
+}
+
+thead th, tbody td {
+    border: none; /* убираем старые границы */
+    border-bottom: 1px solid #ddd;
+    padding: 6px 8px;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 12px;
+}
+
+thead th {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.table-6cols thead th:nth-child(1) { width: 105px; }
+.table-6cols thead th:nth-child(2),
+.table-6cols thead th:nth-child(3),
+.table-6cols thead th:nth-child(4),
+.table-6cols thead th:nth-child(5){ width: 210px; }
+.table-6cols thead th:nth-child(6) { width: 310px; }
+
+
+.table-6cols tbody td:nth-child(1) { width: 140px; }
+.table-6cols tbody td:nth-child(2),
+.table-6cols tbody td:nth-child(3),
+.table-6cols tbody td:nth-child(4),
+.table-6cols tbody td:nth-child(5){ width: 280px; }
+.table-6cols tbody td:nth-child(6) { width: 420px; }
+
+
+
+thead th:first-child {
+    border-top-left-radius: 16px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 16px;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 16px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
+}
+tbody td:not(:last-child),
+thead th:not(:last-child) {
+    border-right: 1px solid #ddd; /* добавим только вертикальные границы внутри */
+}
+
+
+.table-6cols tbody tr:nth-child(even),
+.table-6cols tbody tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+
+
+
+
+tbody td a.btn,
+tbody td .btn-danger {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    /*margin-top: 18px;*/
+
+    /* Убираем двойной margin, чтоб не конфликтовало */
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0; /* чтобы вертикально не дергалось */
+
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* чтобы убрать подчеркивание */
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Hover эффект — чуть темнее и маленькое масштабирование + тень */
+tbody td a.btn:hover,
+tbody td .btn-danger:hover {
+    background-color: #218838; /* темнее зеленого */
+    box-shadow: 0 6px 12px rgba(33, 136, 56, 0.7);
+    transform: scale(1.05);
+}
+
+
+
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .btn, .home-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    thead th, tbody td {
+        padding: 6px;
+    }
+
+    .container {
+        padding: 80px 20px 20px 20px;
+    }
+}
+
+/* === Анимация === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

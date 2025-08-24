@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Show invoice</title>
+    <link rel="stylesheet" th:href="@{/invoiceStyles/showInvoiceById.css}">
+</head>
+<body>
+<div class="container">
+    <button class="home-button" onclick="window.location.href='/invoice'">← BACK</button>
+    <h1>Invoice № <span th:text="${invoice.id}"></span></h1>
+    <p>Date: <span th:text="${invoice.date}"></span></p>
+    <p>Firm: <span th:text="${invoice.firmName}"></span></p>
+    <p>Sum: <span th:text="${invoice.sum}"></span></p>
+    <p>Note: <span th:text="${invoice.note}"></span></p>
+
+    <h2>Products</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Purchase price</th>
+            <th>Total price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${invoice.items}">
+            <td th:text="${item.productName}"></td>
+            <td th:text="${item.quantity}"></td>
+            <td th:text="${item.purchasePrice}"></td>
+            <td th:text="${item.quantity*item.purchasePrice}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

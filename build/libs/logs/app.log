@@ -1,0 +1,12 @@
+2025-08-24 12:39:48 INFO  [main] a.g.s.product.ProductApplication - Starting ProductApplication v0.0.1-SNAPSHOT using Java 23.0.1 with PID 41048 (C:\Users\ASUS\IdeaProjects\Product\build\libs\Product-0.0.1-SNAPSHOT.jar started by ASUS in C:\Users\ASUS\IdeaProjects\Product\build\libs)
+2025-08-24 12:39:48 DEBUG [main] a.g.s.product.ProductApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-08-24 12:39:48 INFO  [main] a.g.s.product.ProductApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-24 12:39:50 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24 12:39:51 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24 12:39:53 INFO  [main] a.g.s.product.ProductApplication - Started ProductApplication in 5.424 seconds (process running for 6.062)
+2025-08-24 12:39:56 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-24 12:39:56 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-24 12:40:11 DEBUG [http-nio-8080-exec-5] a.g.s.product.service.FirmService - [DEBUG] Fetching all firms from database...
+2025-08-24 12:40:11 INFO  [http-nio-8080-exec-5] a.g.s.product.service.FirmService - [GET] Retrieved 0 firm(s) from database.
+2025-08-24 12:40:11 INFO  [http-nio-8080-exec-5] a.g.s.product.service.FirmService - [GET] Retrieved 0 firm(s) from database.
+2025-08-24 12:40:11 DEBUG [http-nio-8080-exec-5] a.g.s.product.service.FirmService - [DEBUG] Mapped 0 firm(s) to FirmResponseDto list.

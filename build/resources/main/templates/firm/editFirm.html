@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit firm</title>
+    <link rel="stylesheet" th:href="@{/firmStyles/stylesFirmCreateEdit.css}">
+</head>
+<body>
+<form th:method="POST" th:action="@{/firm/{id}(id=${firmId})}" th:object="${updatedFirm}">
+    <input type="hidden" name="_method" value="patch"/>
+
+    <label for="name">Firm name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <div class="error-message" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name errors</div>
+    <br/>
+
+    <label for="inn">Firm inn: </label>
+    <input type="text" th:field="*{inn}" id="inn"/>
+    <div class="error-message" th:if="${#fields.hasErrors('inn')}" th:errors="*{inn}">INN errors</div>
+    <br/>
+
+    <label for="email">Firm email: </label>
+    <input type="text" th:field="*{email}" id="email"/>
+    <div class="error-message" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email errors</div>
+    <br/>
+
+    <label for="number">Firm mobile number: </label>
+    <input type="text" th:field="*{mobileNumber}" id="number"/>
+    <div class="error-message" th:if="${#fields.hasErrors('mobileNumber')}" th:errors="*{mobileNumber}">Mobile number errors</div>
+    <br/>
+
+    <label for="country">Address country:</label>
+    <input type="text" th:field="*{address.country}" id="country"/>
+    <div class="error-message" th:if="${#fields.hasErrors('address.country')}" th:errors="*{address.country}">Address errors</div>
+    <br/>
+
+    <label for="city">City:</label>
+    <input type="text" th:field="*{address.city}" id="city"/>
+    <div class="error-message" th:if="${#fields.hasErrors('address.city')}" th:errors="*{address.city}">Address errors</div>
+    <br/>
+
+    <label for="street">Street:</label>
+    <input type="text" th:field="*{address.street}" id="street"/>
+    <div class="error-message" th:if="${#fields.hasErrors('address.street')}" th:errors="*{address.street}">Address errors</div>
+    <br/>
+
+    <label for="houseNumber">House No:</label>
+    <input type="text" th:field="*{address.houseNumber}" id="houseNumber"/>
+    <br/>
+    <div class="buttons-wrapper">
+        <input type="submit" value="Edit!" class="form-button" />
+        <a href="/firm" class="form-button">Back</a>
+    </div>
+
+
+</form>
+</body>
+</html>

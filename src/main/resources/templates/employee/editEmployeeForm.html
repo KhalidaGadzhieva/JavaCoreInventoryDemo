@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit employee</title>
+    <link rel="stylesheet" href="/employeeStyles/postEditEmployeeForm.css">
+</head>
+<body>
+<div class="container">
+    <button class="home-button" onclick="window.location.href='/employee'">← BACK</button>
+    <h1>EMPLOYEE EDIT</h1>
+
+    <form th:action="@{'/employee/' + ${EmployeeId}}" method="post" th:object="${updatedEmployee}">
+        <input type="hidden" name="_method" value="patch"/>
+
+        <div class="form-grid">
+            <div class="left">
+                <label>First name:
+                    <input type="text" th:field="*{firstName}">
+                    <div class="error" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+                </label>
+
+                <label>Last name:
+                    <input type="text" th:field="*{lastName}">
+                    <div class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+                </label>
+
+                <label>Birth date:
+                    <input type="date" th:field="*{birthDate}">
+                    <div class="error" th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}"></div>
+                </label>
+
+                <label>Passport number:
+                    <input type="text" th:field="*{passportNumber}">
+                    <div class="error" th:if="${#fields.hasErrors('passportNumber')}" th:errors="*{passportNumber}"></div>
+                </label>
+
+                <label>Email:
+                    <input type="email" th:field="*{email}">
+                    <div class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                </label>
+
+                <label>Phone number:
+                    <input type="text" th:field="*{phoneNumber}">
+                    <div class="error" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
+                </label>
+
+                <div class="row-pair">
+                    <label>Country:
+                        <input type="text" th:field="*{address.country}">
+                        <div class="error" th:if="${#fields.hasErrors('address.country')}" th:errors="*{address.country}"></div>
+                    </label>
+
+                    <label>City:
+                        <input type="text" th:field="*{address.city}">
+                        <div class="error" th:if="${#fields.hasErrors('address.city')}" th:errors="*{address.city}"></div>
+                    </label>
+                </div>
+
+                <div class="row-pair">
+                    <label>Street:
+                        <input type="text" th:field="*{address.street}">
+                        <div class="error" th:if="${#fields.hasErrors('address.street')}" th:errors="*{address.street}"></div>
+                    </label>
+
+                    <label>House number:
+                        <input type="text" th:field="*{address.houseNumber}">
+                        <div class="error" th:if="${#fields.hasErrors('address.houseNumber')}" th:errors="*{address.houseNumber}"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="right">
+                <label>Work place:
+                    <input type="text" th:field="*{workplace}">
+                    <div class="error" th:if="${#fields.hasErrors('workplace')}" th:errors="*{workplace}"></div>
+                </label>
+
+                <label>Department:
+                    <input type="text" th:field="*{department}">
+                    <div class="error" th:if="${#fields.hasErrors('department')}" th:errors="*{department}"></div>
+                </label>
+
+                <label>Position:
+                    <input type="text" th:field="*{position}">
+                    <div class="error" th:if="${#fields.hasErrors('position')}" th:errors="*{position}"></div>
+                </label>
+
+                <label>Hire date:
+                    <input type="date" th:field="*{hireDate}">
+                    <div class="error" th:if="${#fields.hasErrors('hireDate')}" th:errors="*{hireDate}"></div>
+                </label>
+
+                <label>Hire order №:
+                    <input type="text" th:field="*{hireOrderNumber}">
+                    <div class="error" th:if="${#fields.hasErrors('hireOrderNumber')}" th:errors="*{hireOrderNumber}"></div>
+                </label>
+
+                <label>Notes:<br>
+                    <textarea th:field="*{notes}" rows="5" placeholder="Info..."></textarea>
+                    <div class="error" th:if="${#fields.hasErrors('notes')}" th:errors="*{notes}"></div>
+                </label>
+
+                <button type="submit" class="submit-button">EDIT</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

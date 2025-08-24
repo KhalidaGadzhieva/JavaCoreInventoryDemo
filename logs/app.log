@@ -1,0 +1,6 @@
+2025-08-24 15:03:36 INFO  [main] a.g.s.product.ProductApplication - Starting ProductApplication using Java 21.0.7 with PID 44052 (C:\Users\ASUS\IdeaProjects\Product\build\classes\java\main started by ASUS in C:\Users\ASUS\IdeaProjects\Product)
+2025-08-24 15:03:36 DEBUG [main] a.g.s.product.ProductApplication - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-08-24 15:03:36 INFO  [main] a.g.s.product.ProductApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-24 15:03:38 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-24 15:03:39 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-24 15:03:39 INFO  [main] a.g.s.product.ProductApplication - Started ProductApplication in 3.158 seconds (process running for 3.681)

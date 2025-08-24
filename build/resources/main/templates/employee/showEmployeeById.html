@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Show employee</title>
+    <link rel="stylesheet" href="/employeeStyles/showEmployeeById.css">
+</head>
+<body>
+<div class="container">
+    <button class="home-button" onclick="window.location.href='/employee'">← BACK</button>
+    <h1 th:text="${employee.firstName + ' ' + employee.lastName}">FullName</h1>
+
+    <div class="profile">
+
+        <div class="details">
+            <p><strong>Position:</strong> <span th:text="${employee.position}"></span></p>
+            <p><strong>Birth date:</strong> <span th:text="${employee.birthDate}"></span></p>
+            <p><strong>Passport number:</strong> <span th:text="${employee.passportNumber}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${employee.email}"></span></p>
+            <p><strong>Phone number:</strong> <span th:text="${employee.phoneNumber}"></span></p>
+            <P><strong>Address:</strong> <span th:text="${employee.address.country+', '+employee.address.city+', '+
+            employee.address.street+', '+employee.address.houseNumber}"></span></P>
+            <p><strong>Hire date:</strong> <span th:text="${employee.hireDate}"></span></p>
+            <p><strong>Hire order №:</strong> <span th:text="${employee.hireOrderNumber}"></span></p>
+            <p><strong>Department:</strong> <span th:text="${employee.department}"></span></p>
+            <p><strong>Work place:</strong> <span th:text="${employee.workplace}"></span></p>
+            <p><strong>Notes:</strong> <span th:text="${employee.notes}">-</span></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

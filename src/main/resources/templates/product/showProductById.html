@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" th:href="@{/firmStyles/modelDetails.css}">
+</head>
+<body>
+<div class="container">
+    <h2>Product Details</h2>
+    <div class="details">
+        <p><strong>ID:</strong> <span th:text="${product.id}">XXXXXXX</span></p>
+        <p><strong>NAME:</strong> <span th:text="${product.name}">XXXXXXX</span></p>
+        <p><strong>BARCODE:</strong> <span th:text="${product.barcode}">XXXXXXX</span></p>
+        <p><strong>FIRM_NAME:</strong> <span th:text="${product.firmName}">XXXXXXX</span></p>
+        <p><strong>CATEGORY:</strong> <span th:text="${product.category}">XXXXXXX</span></p>
+        <p><strong>PURCHASE_PRICE:</strong> <span th:text="${product.purchasePrice}">XXXXXXX</span></p>
+        <p><strong>SELLING_PRICE:</strong> <span th:text="${product.sellingPrice}">XXXXXXX</span></p>
+        <p><strong>STOCK:</strong> <span th:text="${product.stock}">XXXXXXX</span></p>
+        <p><strong>UNIT:</strong> <span th:text="${product.unit}">XXXXXXX</span></p>
+    </div>
+    <div class="centered-links">
+        <a href="/product" class="btn">← Back to Product List</a>
+    </div>
+</div>
+</body>
+</html>

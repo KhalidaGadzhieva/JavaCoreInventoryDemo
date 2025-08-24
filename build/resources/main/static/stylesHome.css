@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('images/imageForFon.jpg'); /* путь до файла */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Убираем фон у боковой панели */
+.sidebar {
+    width: 300px;
+    /* background убрали, теперь он прозрачный */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* РАСПРЕДЕЛЕНИЕ КНОПОК ПО ВСЕЙ ВЫСОТЕ */
+    padding: 40px;
+    /*background: transparent;*/
+
+}
+.sidebar a.menu-button,
+.sidebar button.menu-button {
+    all: unset;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 15px;
+    background: rgba(139, 69, 19, 0.8);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.5s;
+}
+
+.sidebar a.menu-button:hover,
+.sidebar button.menu-button:hover {
+    background: rgba(244, 164, 96, 0.8);
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* чтобы текст был читаем */
+}
+
+.main-content h1 {
+    font-size: 100px;
+}
+
+.main-content h2 {
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.gallery {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/*.sidebar button.menu-button {*/
+/*    text-decoration: none; !* Убирает подчеркивание *!*/
+/*    text-align: center;    !* Центрирует текст *!*/
+/*    display: block;        !* Чтобы работало text-align *!*/
+/*    background: rgba(139, 69, 19, 0.8); !* полупрозрачный коричневый *!*/
+/*    border: none;*/
+/*    color: white;*/
+/*    padding: 20px;*/
+/*    font-size: 25px;*/
+/*    border-radius: 15px;*/
+/*    transition: background 0.5s;*/
+/*    cursor: pointer;*/
+/*    width: 100%;*/
+/*}*/
+/*.sidebar button.menu-button:hover {*/
+/*    background: rgba(244, 164, 96, 0.8); !* полупрозрачный sandybrown *!*/
+/*}*/

@@ -1,0 +1,68 @@
+/* Задний фон модалки */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Поверх всего */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный туман */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+
+/* Контент внутри модалки */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Кнопки подтверждения */
+.confirm-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background-color: #218838; /* темнее зеленого */
+    box-shadow: 0 6px 12px rgba(33, 136, 56, 0.7);
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background-color: red;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: darkred; /* темнее зеленого */
+    box-shadow: 0 6px 12px rgba(179, 0, 0, 0.5); /* усиленная красная тень */
+    transform: scale(1.05);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

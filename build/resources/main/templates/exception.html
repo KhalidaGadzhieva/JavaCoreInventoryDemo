@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error</title>
+    <link rel="stylesheet" th:href="@{/stylesException.css}">
+
+</head>
+<body>
+<div class="overlay">
+    <div class="error-box">
+<h1>Exception</h1>
+<p th:text="${message}">Exception</p>
+        <button class="home-button" onclick="history.back()">← BACK</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* ======= ОБЩИЕ СТИЛИ СТРАНИЦЫ ======= */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+}
+
+/* Фон с картинкой */
+body {
+    background-image: url('../images/imageForFon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Полупрозрачный осветляющий слой поверх фона */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* ← регулируй прозрачность по вкусу */
+    z-index: 0;
+}
+
+/* Чтобы форма была поверх слоя */
+form {
+    position: relative;
+    z-index: 1;
+}
+
+/* ======= СТИЛИ ФОРМЫ ======= */
+/*form {*/
+/*    max-width: 380px;*/
+/*    max-height: 90vh;*/
+/*    margin: 20px auto;*/
+/*    padding: 20px;*/
+/*    background-color: rgba(255, 255, 255, 0.9); !* чуть плотнее фон *!*/
+/*    border-radius: 12px;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*    font-size: 14px;*/
+/*}*/
+form {
+    max-width: 380px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+
+/* Метки */
+form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: saddlebrown;
+}
+
+/* Поля */
+form input,
+form select,
+form textarea {
+    font-size: 16px;
+    padding: 6px 10px;
+    height: 35px;
+    border-radius: 6px;
+    border: 1.8px solid #c4a17a;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: saddlebrown;
+    outline: none;
+}
+
+/* Сообщения об ошибке */
+div[style*="color:red"] {
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #b22222;
+}
+.form-button {
+    box-sizing: border-box;  /* Очень важно! */
+    display: inline-flex;    /* вместо flex — inline-flex сохраняет размеры и поведение */
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    margin-top: 20px;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, saddlebrown, peru);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-decoration: none;
+    line-height: normal;
+}
+
+/* Ховер оставляем как есть */
+.form-button:hover {
+    background: linear-gradient(135deg, sandybrown, peru);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transform: scale(1.02);
+    color: white;
+}
+
+
+.error-message {
+    color: #b22222;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+
+/* ======= АДАПТИВНОСТЬ ======= */
+@media (max-width: 640px) {
+    form {
+        margin: 20px;
+        padding: 15px;
+    }
+}

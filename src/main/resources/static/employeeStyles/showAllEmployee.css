@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/imageForFon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #222;
+    background-color: rgba(255, 255, 255, 0.2); /* доп. светлая дымка */
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.55); /* Прозрачный белый слой */
+    z-index: -1; /* остаётся под всем остальным */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* немного прозрачный, мягкий */
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.home-button,
+.add-new-btn {
+    font-size: 16px;
+    background-color: #007BFF; /* классический синий */
+    color: white;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 10px 30px 0;
+}
+.home-button:hover,
+.add-new-btn:hover {
+    background-color: #0056b3; /* темнее синий */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.6); /* синяя тень */
+}
+
+.employee-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.employee-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fffefa;
+    border-left: 6px solid #28a745;
+    padding: 20px 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+.employee-info {
+    flex: 3;
+}
+
+
+.employee-info h2 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #222;
+}
+
+.employee-info p {
+    font-size: 17px;
+    margin: 6px 0;
+    color: #444;
+}
+
+.actions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.actions a,
+.actions button {
+    width: 120px;
+    padding: 10px 18px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    background-color: #28a745; /* зеленый bootstrap-ish */
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.actions a:hover,
+.actions button:hover {
+    background-color: #1e7e34; /* темнее зелёный */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(30, 126, 52, 0.6); /* зелёная тень */
+}

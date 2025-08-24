@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show all users</title>
+    <link rel="stylesheet" th:href="@{/usersTableStyle.css}">
+</head>
+<body>
+<h2>ALL USERS</h2>
+
+<div class="table-wrapper">
+    <div class="table-wrapper table-5cols">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>USERNAME</th>
+                <th>ROLE</th>
+                <th>EMAIL</th>
+                <th>LOGIN</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.role}"></td>
+                <td th:text="${user.email}"></td>
+
+                <td>
+                    <a th:href="@{'/admin/home/impersonate/' + ${user.id}}" class="btn">LOGIN</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

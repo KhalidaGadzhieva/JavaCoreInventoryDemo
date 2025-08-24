@@ -1,0 +1,90 @@
+/* === Общие стили для body с фоном === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('../images/imageForFon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+/* Полупрозрачный белый слой поверх фона */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+}
+
+/* Контейнер страницы */
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Заголовок */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Секция с деталями */
+.details p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin: 10px 0;
+}
+
+.details strong {
+    color: saddlebrown;
+}
+
+/* Кнопка назад */
+.centered-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: saddlebrown;
+    color: white;
+    padding: 10px 24px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: sandybrown;
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+}

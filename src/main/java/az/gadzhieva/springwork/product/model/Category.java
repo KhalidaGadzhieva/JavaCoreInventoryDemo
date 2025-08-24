@@ -1,0 +1,37 @@
+package az.gadzhieva.springwork.product.model;
+
+public enum Category {
+    FRESH_FRUITS,
+    GROCERY,
+    VEGETABLES,
+    DAIRY,
+    MEAT,
+    FISH,
+    BAKERY,
+    FROZEN_PRODUCTS,
+    BEVERAGES,
+    SNACKS,
+    CANNED_GOODS,
+    MEDICINE,
+    HYGIENE,
+    MAKEUP,
+    SKINCARE,
+    TOYS,
+    BABY_PRODUCTS,
+    STATIONERY,
+    ELECTRONICS,
+    CLOTHES,
+    SHOES,
+    ACCESSORIES,
+    PET_PRODUCTS,
+    CLEANING_PRODUCTS,
+    HOUSEHOLD_ITEMS,
+    SPORTS_EQUIPMENT,
+    GARDENING,
+    AUTO_PRODUCTS,
+    BOOKS,
+    ALCOHOL,
+    NON_ALCOHOLIC_DRINKS,
+    SEASONAL
+}
+

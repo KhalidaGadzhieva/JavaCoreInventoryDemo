@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>System</title>
+    <link rel="stylesheet" th:href="@{/stylesHome.css}">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <a href="/user/home" class="menu-button">HOME</a>
+        <a href="/user/home/info" class="menu-button">ABOUT</a>
+        <a href="/employee" class="menu-button">TEAM</a>
+        <a href="/firm" class="menu-button">FIRMS</a>
+        <a href="/product" class="menu-button">PRODUCTS</a>
+        <a href="/invoice" class="menu-button">INVOICES</a>
+<!--        <a href="/cart" class="menu-button"></a>-->
+        <!-- ЛОГАУТ -->
+        <form th:action="@{/logout}" method="post" style="margin:0; padding:0; width: 100%;">
+            <button type="submit" class="menu-button">LOGOUT</button>
+        </form>
+    </aside>
+
+
+    <main class="main-content">
+        <h1>Hello, user!</h1>
+        <h2>Welcome to system!</h2>
+    </main>
+</div>
+</body>
+</html>

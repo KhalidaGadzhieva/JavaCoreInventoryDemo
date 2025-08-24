@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post firm</title>
+    <link rel="stylesheet" th:href="@{/firmStyles/stylesFirmCreateEdit.css}">
+</head>
+<body>
+<form th:method="POST" th:action="@{/product}" th:object="${newProduct}">
+    <label for="name">Product name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name errors</div>
+    <br/>
+
+    <label for="barcode">Product barcode: </label>
+    <input type="text" th:field="*{barcode}" id="barcode"/>
+    <div style="color:red" th:if="${#fields.hasErrors('barcode')}" th:errors="*{barcode}">Barcode errors</div>
+    <br/>
+
+    <label for="firm">Product Firm:</label>
+    <select th:field="*{firmId}" id="firm">
+        <option th:each="firm : ${firms}"
+                th:value="${firm.id}"
+                th:text="${firm.name}">Firm</option>
+    </select>
+    <div style="color:red" th:if="${#fields.hasErrors('firmId')}" th:errors="*{firmId}">Firm errors</div>
+
+
+    <label for="category">Product category: </label>
+    <select th:field="*{category}" id="category">
+        <option th:each="cat : ${categories}"
+                th:value="${cat}"
+                th:text="${cat}">Category</option>
+    </select>
+    <br/>
+
+    <label for="unit">Product unit: </label>
+    <select th:field="*{unit}" id="unit">
+        <option th:each="cat : ${unites}"
+                th:value="${cat}"
+                th:text="${cat}">Unit</option>
+    </select>
+    <br/>
+
+    <div class="buttons-wrapper">
+        <input type="submit" value="Create!" class="form-button" />
+        <a href="/product" class="form-button">Back</a>
+    </div>
+</form>
+</body>
+</html>
