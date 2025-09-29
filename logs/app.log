@@ -4,3 +4,35 @@
 2025-08-24 15:03:38 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 2025-08-24 15:03:39 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-08-24 15:03:39 INFO  [main] a.g.s.product.ProductApplication - Started ProductApplication in 3.158 seconds (process running for 3.681)
+2025-09-29 14:25:03 INFO  [Test worker] a.g.s.p.ProductApplicationTests - Starting ProductApplicationTests using Java 21.0.8 with PID 32364 (started by ASUS in C:\Users\ASUS\IdeaProjects\JavaCoreInventoryDemo)
+2025-09-29 14:25:03 DEBUG [Test worker] a.g.s.p.ProductApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-09-29 14:25:03 INFO  [Test worker] a.g.s.p.ProductApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-29 14:25:05 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-29 14:25:07 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29 14:25:08 INFO  [Test worker] a.g.s.p.ProductApplicationTests - Started ProductApplicationTests in 4.916 seconds (process running for 5.925)
+2025-09-29 14:37:08 INFO  [Test worker] a.g.s.p.ProductApplicationTests - Starting ProductApplicationTests using Java 21.0.7 with PID 3412 (started by ASUS in C:\Users\ASUS\IdeaProjects\JavaCoreInventoryDemo)
+2025-09-29 14:37:08 DEBUG [Test worker] a.g.s.p.ProductApplicationTests - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-09-29 14:37:08 INFO  [Test worker] a.g.s.p.ProductApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-29 14:37:10 WARN  [Test worker] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-29 14:37:12 WARN  [Test worker] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29 14:37:12 INFO  [Test worker] a.g.s.p.ProductApplicationTests - Started ProductApplicationTests in 4.495 seconds (process running for 5.437)
+2025-09-29 14:38:32 INFO  [main] a.g.s.product.ProductApplication - Starting ProductApplication using Java 21.0.8 with PID 27256 (C:\Users\ASUS\IdeaProjects\JavaCoreInventoryDemo\build\classes\java\main started by ASUS in C:\Users\ASUS\IdeaProjects\JavaCoreInventoryDemo)
+2025-09-29 14:38:32 DEBUG [main] a.g.s.product.ProductApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-09-29 14:38:32 INFO  [main] a.g.s.product.ProductApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-29 14:38:34 WARN  [main] org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-29 14:38:35 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29 14:38:35 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-09-29 14:38:35 ERROR [main] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
